@@ -1,0 +1,15 @@
+D:\Files\Beast\.NET-Examples\Examples\EventExample\bin\Debug\net8.0\EventExample.exe
+D:\Files\Beast\.NET-Examples\Examples\EventExample\bin\Debug\net8.0\EventExample.deps.json
+D:\Files\Beast\.NET-Examples\Examples\EventExample\bin\Debug\net8.0\EventExample.runtimeconfig.json
+D:\Files\Beast\.NET-Examples\Examples\EventExample\bin\Debug\net8.0\EventExample.dll
+D:\Files\Beast\.NET-Examples\Examples\EventExample\bin\Debug\net8.0\EventExample.pdb
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.AssemblyInfoInputs.cache
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.AssemblyInfo.cs
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.csproj.CoreCompileInputs.cache
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.sourcelink.json
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.dll
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\refint\EventExample.dll
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.pdb
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\EventExample.genruntimeconfig.cache
+D:\Files\Beast\.NET-Examples\Examples\EventExample\obj\Debug\net8.0\ref\EventExample.dll

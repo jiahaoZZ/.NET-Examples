@@ -1,0 +1,15 @@
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\bin\Debug\net8.0\GenericExamples.exe
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\bin\Debug\net8.0\GenericExamples.deps.json
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\bin\Debug\net8.0\GenericExamples.runtimeconfig.json
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\bin\Debug\net8.0\GenericExamples.dll
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\bin\Debug\net8.0\GenericExamples.pdb
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.GeneratedMSBuildEditorConfig.editorconfig
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.AssemblyInfoInputs.cache
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.AssemblyInfo.cs
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.csproj.CoreCompileInputs.cache
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.sourcelink.json
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.dll
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\refint\GenericExamples.dll
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.pdb
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\GenericExamples.genruntimeconfig.cache
+D:\Files\Beast\.NET-Examples\Examples\GenericExamples\obj\Debug\net8.0\ref\GenericExamples.dll

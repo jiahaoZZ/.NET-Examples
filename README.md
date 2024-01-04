@@ -81,9 +81,7 @@ class Program
 |  virtual  | The method can be implemented by a derived type and can be invoked either statically or dynamically. |
 |           |                                                              |
 
-
-
-#### Generic types
+### Generic types
 
 Generic type is the type being defined in advanced and being replaced when utilization. It supports for class, struct and interface. 
 
@@ -139,4 +137,99 @@ public static class
 
 
 Invariance means that you can use only the type originally specified. An invariant generic type parameter is neither covariant nor contravariant.
+
+### Collections
+
+There are 2 main types of collections; generic collection and non-generic collection.
+
+Generic collection
+
+- type safe at compile time
+- better performance
+- no needs to transform from and to objects when add or remove items from collections
+
+Non-generic collection
+
+- store items as objects
+- require casting
+
+| I want to…                                                                                                                                                                                                                                                                                                                                     | Generic collection options                                                                                                                                                                     | Non-generic collection options                                                                                                                                                  | Thread-safe or immutable collection options                                                                                                                                                                                                                                                                                                                               |
+|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Store items as key/value pairs for quick look-up by key                                                                                                                                                                                                                                                                                        | [Dictionary](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)                                                                                             | [Hashtable](https://learn.microsoft.com/en-us/dotnet/api/system.collections.hashtable)  (A collection of key/value pairs that are organized based on the hash code of the key.) | [ConcurrentDictionary](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentdictionary-2)  [ReadOnlyDictionary](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.readonlydictionary-2)  [ImmutableDictionary](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutabledictionary-2) |
+| Access items by index                                                                                                                                                                                                                                                                                                                          | [List](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1)                                                                                                         | [Array](https://learn.microsoft.com/en-us/dotnet/api/system.array)  [ArrayList](https://learn.microsoft.com/en-us/dotnet/api/system.collections.arraylist)                      | [ImmutableList](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablelist-1)  [ImmutableArray](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablearray)                                                                                                                                                    |
+| Use items first-in-first-out (FIFO)                                                                                                                                                                                                                                                                                                            | [Queue](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.queue-1)                                                                                                       | [Queue](https://learn.microsoft.com/en-us/dotnet/api/system.collections.queue)                                                                                                  | [ConcurrentQueue](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentqueue-1)  [ImmutableQueue](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablequeue-1)                                                                                                                                             |
+| Use data Last-In-First-Out (LIFO)                                                                                                                                                                                                                                                                                                              | [Stack](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.stack-1)                                                                                                       | [Stack](https://learn.microsoft.com/en-us/dotnet/api/system.collections.stack)                                                                                                  | [ConcurrentStack](https://learn.microsoft.com/en-us/dotnet/api/system.collections.concurrent.concurrentstack-1)  [ImmutableStack](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablestack-1)                                                                                                                                             |
+| Access items sequentially                                                                                                                                                                                                                                                                                                                      | [LinkedList](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.linkedlist-1)                                                                                             | No recommendation                                                                                                                                                               | No recommendation                                                                                                                                                                                                                                                                                                                                                         |
+| Receive notifications when items are removed or added to the collection. (implements [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged) and [INotifyCollectionChanged](https://learn.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged)) | [ObservableCollection](https://learn.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1)                                                                     | No recommendation                                                                                                                                                               | No recommendation                                                                                                                                                                                                                                                                                                                                                         |
+| A sorted collection                                                                                                                                                                                                                                                                                                                            | [SortedList](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.sortedlist-2)                                                                                             | [SortedList](https://learn.microsoft.com/en-us/dotnet/api/system.collections.sortedlist)                                                                                        | [ImmutableSortedDictionary](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablesorteddictionary-2)  [ImmutableSortedSet](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablesortedset-1)                                                                                                                  |
+| A set for mathematical functions                                                                                                                                                                                                                                                                                                               | [HashSet](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1)  [SortedSet](https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.sortedset-1) | No recommendation                                                                                                                                                               | [ImmutableHashSet](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablehashset-1)  [ImmutableSortedSet](https://learn.microsoft.com/en-us/dotnet/api/system.collections.immutable.immutablesortedset-1)                                                                                                                                    |
+
+### Delegate and lambda
+
+Delegate represents the reference to a method and it has predefined the parameters and return types.
+
+There are 3 build-in delegates which are Action, Func and Predicate...
+
+Action
+
+- return void
+- can have 16 parameters as maximum
+
+Func
+
+- can define the return type as the last parameter
+- can have 15 parameters as maximum
+
+Predicate
+
+- could be rewritten as Func<T, bool>
+
+### Events
+
+Event is based on delegate and set a invocation. Once the invocation is occurred, the actual methods (delegate points
+to) will be performed.
+
+### Exceptions
+
+When program got errors, we can throw the exception.
+
+The most frequently used is try/catch.
+
+We can also actively throw a exception with "throw" keyword.
+
+We can define our own exception by inheriting exception class.
+
+### Numeric types
+
+Hmmm...not too clear about this one
+
+### Date, time, time zone
+
+The default time is local time. we can setting it as global time by utc.
+
+format it by
+
+```c#
+DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+```
+
+### Attribute
+
+a way to add metadata to code elements such as assemblies, types, methods, properties, classes.
+
+we can write our own attribute by inheriting Attribute class.
+
+To summarize, add metadata for reflection.
+
+## Runtime Libraries
+
+[TODO]
+
+## Execution Model
+
+[TODO]
+
+
+
+
 
