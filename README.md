@@ -223,11 +223,165 @@ To summarize, add metadata for reflection.
 
 ## Runtime Libraries
 
-[TODO]
+### Format 
 
-## Execution Model
+The default is to override the Object.ToString() method to define a custom representation of an object's value.
 
-[TODO]
+### Work with Strings
+
+nothing special, google it.
+
+### Regular Expression
+
+System.Text.RegularExpression.Regex
+
+nothing special, google it.
+
+### Serialization
+
+JsonSerializer.Serialize() and JsonSerializer.Deserialize()
+
+nothing special, google it.
+
+
+
+### System.CommandLine
+
+Currently in PREVIEW. 
+
+Do it later if needed. [TODO]
+
+
+
+### File and Stream I/O
+
+[docs](https://learn.microsoft.com/en-us/dotnet/standard/io/)
+
+
+
+### Dependency Injection (DI)
+
+This is pretty important in software development. 
+
+DI always appears with Inversion of Control (IoC). You can google it what they are. I'll write my own understanding here. 
+
+Consider the following senario.
+
+> We eat something when we were hungry. For example, we want to eat pizza, burger and drink cola. 
+>
+> The essential thing is that, we need to cook and get the food (went to supermarket to buy ingredients, went to kitchen ... finally, wash the dishes, and put rubbish into bins )
+>
+> so if we want to eat them, we have the dependencies, that the steps we need to do before get the food and after eat. 
+>
+> However, we had an optimized solution. We can say "Mom!!!!!!" and she will do it for us. What we we need to do is eat (focus on what we want) 
+
+It's similar in the software development.
+
+> We write our own entities and operate the business logic in our own domain/module. 
+>
+> The essential thing is that, our domain/module are not isolated and may have the relationship or communication with the others. (For example, we (we are the developers) need to log the details on somewhere if throw an exception. We want it stored locally as a text file, and also stored remotely which benefit on Testers/Operators (as they might have no access to the host deploying the application)).
+>
+> so if we want to log the detail, we have the dependencies, that the steps we need to do before and after logging, such as how to create a logger, how to guarantee the details are logged successfully, how to release the memory when it was not used anymore(otherwise might cause memory leak)
+>
+> However, we had an optimize solution. We can say "system" and it will do everything for us. What we need to do is that log the error (focus on the error message)
+
+Before the implementation of DI, we depends on something. The IoC is a concept and DI is the implementation of IoC. We add services into the "container" and then system will prepare what we need. If we want to use certain services, we just inject those required services (Dependencies) into constructors and use it in our methods. 
+
+
+
+There are 3 types of lifetime we can register services with
+
+- Transient, create an new instance for you every time
+- Scoped, create a new instance for each request/connection
+- Singleton, create a single and unique instance at first time. Use the same instance at all time.
+
+
+
+### Configuration
+
+Read configuration from different sources. So we can dynamically change the configuration without updating code or program.
+
+Configurations types can be simply divided into 2 parts, host app config.
+
+Host config contains server related configs, such as content root path, environment name. They are for the entire application regardless any individual components.
+
+App config are for the rest. 
+
+### Logging
+
+When application/system is running, it can produces some logs that help people understand the running details, are they started, any errors, something like that. 
+
+Build in is console log, which write logs into console. Can be logged on Seq, ES. 
+
+It can also be logged with the third party tools, such as NLog, SeriLog.
+
+
+
+### Host
+
+The .NET Generic Host is responsible for app startup and lifetime management. 
+
+use IHostApplciationLifetime to register the delegate that you want to do when app start, stopping and stopped.
+
+
+
+### **Networking** [TODO]
+
+#### Http
+
+
+
+#### Socket
+
+
+
+#### WebSocket
+
+
+
+#### Security
+
+
+
+#### QUIC
+
+
+
+#### Telemetry
+
+
+
+### Worker Service
+
+A Worker Service in .NET is a type of background service that runs continuously as a background process.
+
+You can create it via template.
+
+Just implement BackgroundService class, and so something. 
+
+
+
+### Cache
+
+Caching is the act of storing data in an intermediate-layer, making subsequent data retrievals faster. Conceptually, caching is a performance optimization strategy and design consideration. Caching can significantly improve app performance by making infrequently changing (or expensive to retrieve) data more readily available.
+
+In-memory cache - store cache in memory (on the host the application running at)
+
+Distributed cache - store cache in another endpoint.  
+
+Both use DI to integrate. 
+
+
+
+### Channel (MassTransit seems better)
+
+n .NET, channels are a part of the System.Threading.Channels namespace and provide a way to communicate and synchronize between different parts of a program, especially in a multithreaded or asynchronous environment. Channels offer a convenient way to pass messages and data between producers and consumers.
+
+I personally think [MassTransit](https://masstransit.io/) is better.
+
+Use the message queue to async information with AMQP protocol, RabbitMQ implementation.
+
+### Assembly [TODO]
 
 
 
